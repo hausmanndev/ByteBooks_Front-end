@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* 🔹 Topo */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e2350;
+  padding: 16px 40px;
+  color: white;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ff8c00;
+}
+
+.search-box {
+  display: flex;
+  gap: 8px;
+}
+
+.search-box input {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  width: 250px;
+}
+
+.search-box button {
+  background-color: #ff8c00;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #e67e00;
+}
+
+/* 🧱 Layout */
+.catalogo {
+  display: flex;
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+/* 🎚️ Sidebar */
+.sidebar {
+  width: 220px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  height: fit-content;
+}
+
+.sidebar h2 {
+  color: #1e2350;
+  margin-bottom: 20px;
+}
+
+.filtro h3 {
+  font-size: 15px;
+  color: #ff8c00;
+  margin-top: 16px;
+}
+
+.filtro label {
+  display: block;
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+/* 📚 Cards */
+.product-grid {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.product-card {
+  background: linear-gradient(to bottom, #f4f4f4 0%, #ffffff 100%);
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  width: calc(25% - 20px);
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 70%;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 12px 0;
+  color: #1e1e1e;
+}
+
+.product-card p {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.btn-details {
+  background: #ff8c00;
+  color: #fff;
+  padding: 8px 18px;
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-details:hover {
+  background: #e67e00;
+  transform: scale(1.05);
+}
+
+/* 🪄 Animação */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsivo */
+@media (max-width: 1000px) {
+  .product-card {
+    width: calc(33.33% - 20px);
+  }
+  .sidebar { display: none; }
+}
+
+@media (max-width: 700px) {
+  .product-card {
+    width: calc(50% - 20px);
+  }
+}
+.invisivel {
+  display: none;
+}
+
+/* =====================
+   POPUP DE DETALHES (AJUSTADO)
+===================== */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0; /* substitui left, top, width e height */
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* permite rolagem se o conteúdo for grande */
+  padding: 40px 20px; /* espaço interno para não cortar nas bordas */
+}
+
+.popup-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-content img {
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1b1f3b;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.popup-content .preco {
+  font-size: 18px;
+  color: #ff7b00;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.btn-add {
+  background-color: #ff7b00;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-add:hover {
+  background-color: #e96b00;
+}
+
+.fechar {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 26px;
+  color: #666;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fechar:hover {
+  color: #ff7b00;
+}
+
+/* Efeito de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

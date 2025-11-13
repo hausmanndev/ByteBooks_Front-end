@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ByteBooks - Catálogo</title>
+  <link rel="stylesheet" href="produtos.css">
+</head>
+<body>
+
+  <!-- 🔍 Barra superior -->
+  <header class="topbar">
+    <div href=index.html class="logo">BYTEBOOKS</div>
+    <div class="search-box">
+      <input type="text" id="buscar" placeholder="Buscar livro...">
+      <button>Buscar</button>
+    </div>
+  </header>
+
+  <main class="catalogo">
+
+    <!-- 🎚️ Barra lateral -->
+    <aside class="sidebar">
+      <h2>Filtros</h2>
+
+      <div class="filtro">
+        <h3>Gênero</h3>
+        <label><input type="radio" name="genero" value=""> Todos</label>
+        <label><input type="radio" name="genero" value="romance"> Romance</label>
+        <label><input type="radio" name="genero" value="suspense"> Suspense</label>
+        <label><input type="radio" name="genero" value="fantasia"> Fantasia</label>
+        <label><input type="radio" name="genero" value="terror"> Terror</label>
+      </div>
+
+      <div class="filtro">
+        <h3>Preço</h3>
+        <label><input type="radio" name="preco" value=""> Todos</label>
+        <label><input type="radio" name="preco" value="0-50"> Até R$50</label>
+        <label><input type="radio" name="preco" value="50-100"> R$50 a R$100</label>
+        <label><input type="radio" name="preco" value="100-9999"> Acima de R$100</label>
+      </div>
+    </aside>
+
+    <!-- 📚 Cards dos produtos -->
+    <section class="product-grid" id="produtos">
+      <div class="product-card"
+        data-nome="A Culpa é das Estrelas"
+        data-genero="romance"
+        data-preco="45.90"
+        data-descricao="Um romance emocionante sobre dois adolescentes que se apaixonam em meio a desafios."
+        data-imagem="img/culpadas.jpg">
+          <img src="img/culpadas.jpg" alt="A Culpa é das Estrelas">
+          <h3>A Culpa é das Estrelas</h3>
+          <p>R$ 45,90</p>
+          <button class="btn-details">Detalhes</button>
+    </div>
+
+          <div class="product-card"
+        data-nome="O Código Da Vinci"
+        data-genero="suspense"
+        data-preco="62.50"
+        data-descricao="Um thriller de mistério e conspiração que mistura arte, religião e segredos milenares."
+        data-imagem="img/codigodavinci.jpg">
+      <img src="img/codigodavinci.jpg" alt="O Código Da Vinci">
+      <h3>O Código Da Vinci</h3>
+      <p>R$ 62,50</p>
+      <button class="btn-details">Detalhes</button>
+    </div>
+
+          <div class="product-card"
+        data-nome="Harry Potter e a Pedra Filosofal"
+        data-genero="fantasia"
+        data-preco="79.90"
+        data-descricao="O início da saga do jovem bruxo Harry Potter em Hogwarts, cheia de magia e aventuras."
+        data-imagem="https://m.media-amazon.com/images/I/81YOuOGFCJL.jpg">
+      <img src="https://m.media-amazon.com/images/I/81YOuOGFCJL.jpg" alt="Harry Potter e a Pedra Filosofal">
+      <h3>Harry Potter e a Pedra Filosofal</h3>
+      <p>R$ 79,90</p>
+      <button class="btn-details">Detalhes</button>
+    </div>
+
+          <div class="product-card"
+        data-nome="It - A Coisa"
+        data-genero="terror"
+        data-preco="95.00"
+        data-descricao="Um grupo de amigos enfrenta uma criatura aterrorizante que se alimenta do medo na cidade de Derry."
+        data-imagem="img/itacoisa.jpg">
+      <img src="img/itacoisa.jpg" alt="It - A Coisa">
+      <h3>It - A Coisa</h3>
+      <p>R$ 95,00</p>
+      <button class="btn-details">Detalhes</button>
+    </div>
+
+          <div class="product-card"
+        data-nome="O Senhor dos Anéis"
+        data-genero="fantasia"
+        data-preco="120.00"
+        data-descricao="Uma das maiores histórias épicas de fantasia, acompanhando Frodo e a Sociedade do Anel em sua jornada para destruir o Um Anel."
+        data-imagem="img/senhordosaneis.jpg">
+      <img src="img/senhordosaneis.jpg" alt="O Senhor dos Anéis">
+      <h3>O Senhor dos Anéis</h3>
+      <p>R$ 120,00</p>
+      <button class="btn-details">Detalhes</button>
+    </div>
+
+          <div class="product-card"
+        data-nome="A Mulher na Janela"
+        data-genero="suspense"
+        data-preco="55.00"
+        data-descricao="Um suspense psicológico envolvente sobre uma mulher que acredita ter testemunhado um crime de sua janela."
+        data-imagem="img/mulhernajanela.jpg">
+      <img src="img/mulhernajanela.jpg" alt="A Mulher na Janela">
+      <h3>A Mulher na Janela</h3>
+      <p>R$ 55,00</p>
+      <button class="btn-details">Detalhes</button>
+    </div>
+
+    <div class="product-card"
+        data-nome="O lado feio do amor"
+        data-genero="romance"
+        data-preco="29.95"
+        data-descricao="Quando começou a se envolver com Miles, Tate prometeu não se apaixonar. Mas vai descobrir que nenhuma regra é capaz de controlar o amor e o desejo..."
+        data-imagem="img/ladofeiodoamor.jpg">
+      <img src="img/ladofeiodoamor.jpg" alt="O lado feio do amor">
+      <h3>O lado feio do amor</h3>
+      <p>R$ 25,95</p>
+      <button class="btn-details">Detalhes</button>
+    </div>
+
+    <div class="product-card"
+        data-nome="Somos todos culpados"
+        data-genero="suspense"
+        data-preco="45.49"
+        data-descricao="Bem-vindo a North Falls ― a nova série de mistério de Karin Slaughter que se passa em uma cidade pequena onde todos se conhecem… ou, pelo menos, é o que achavam."
+        data-imagem="img/somostodos.jpg">
+      <img src="img/somostodos.jpg" alt="Somos todos culpados">
+      <h3>Somos todos culpados</h3>
+      <p>R$ 45,49</p>
+      <button class="btn-details">Detalhes</button>
+    </div>
+
+    <div class="product-card"
+        data-nome="A volta de Sherlock Holmes"
+        data-genero="suspense"
+        data-preco="12.83"
+        data-descricao="A volta de Sherlock Holmes é uma coleção de histórias do detetive mais conhecido do mundo, originalmente publicadas entre 1903-1904, por Arthur Conan Doyle. Dado como morto havia três anos, Sherlock Holmes retorna triunfante para seu querido companheiro Dr. Watson."
+        data-imagem="img/sherlock.jpg">
+      <img src="img/sherlock.jpg" alt="A volta de Sherlock Holmes">
+      <h3>A volta de Sherlock Holmes</h3>
+      <p>R$ 12,83</p>
+      <button class="btn-details">Detalhes</button>
+    </div>
+
+
+      
+    </section>
+  </main>
+
+   <div id="popup" class="popup">
+    <div class="popup-content">
+      <span id="fecharPopup" class="fechar">&times;</span>
+      <img id="popupImg" src="" alt="Imagem do livro">
+      <h2 id="popupTitulo"></h2>
+      <p id="popupDescricao"></p>
+      <p id="popupPreco" class="preco"></p>
+      <button class="btn-add">Adicionar ao carrinho</button>
+    </div>
+  </div>
+
+  <script src="produtos.js"></script>
+</body>
+</html>
