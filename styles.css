@@ -272,59 +272,81 @@ html,body { margin:0; padding:0; font-family: "header1", Arial, sans-serif; colo
   color: #fff;
   opacity: 0.7;
 }
-/* Seção cadastro corrigida */
-.banner-cadastro {
-    background: url('../Site_Bytebooks/img/Bannercard.png') center/cover no-repeat;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    min-height: 500px;
-    padding: 40px 80px;
+
+.cadastro-banner {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background: url('img/Banner-livros-Podpop.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-attachment: fixed;
 }
 
+/* Camada escura por cima da imagem */
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.80);
+  backdrop-filter: blur(1px);
+}
+
+/* Conteúdo */
 .banner-content {
-    max-width: 600px;
-    text-align: center;
+  position: relative;
+  z-index: 0;
+  color: #fff;
+  text-align: center;
+  max-width: 600px;
+  padding: 10px;
 }
 
 .banner-content h2 {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #fff;
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 0;
 }
 
-.banner-content form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* Formulário */
+.form-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.banner-content input {
-    padding: 12px;
-    border-radius: 6px;
-    border: none;
-    outline: none;
+.form-banner input {
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
 }
 
-.banner-content button {
-    background: #ff4e3a;
-    color: #fff;
-    padding: 12px;
-    font-weight: 700;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-/* Remove espaço entre a faixa preta e o banner de cadastro */
-.info-bar2 {
-    margin-bottom: 0;
+.form-banner button {
+  background: #ff8a00;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: 0.2s;
 }
 
-.banner-cadastro {
-    margin-top: 0;
-    padding-top: 0;
+.form-banner button:hover {
+  background: #d97300;
 }
+
+/* Animação suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
 
 /* Rodapé 3 colunas */
 .footer {
